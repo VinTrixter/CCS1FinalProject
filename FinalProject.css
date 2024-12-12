@@ -1,0 +1,680 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: auto;
+	font-family: 'Oswald';
+	font-size: 22px;
+	height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/*Header*/
+header {
+	width: 100%;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	position: fixed;
+	top: 0;
+	z-index: 1000; 
+	padding: 10px 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sdgLogo{
+	position: absolute;
+    top: 45%;
+	left: 37px;
+    width: 5%; /* Adjust size */
+    transform: translateY(-50%); /* Vertically center */
+	cursor: pointer;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sdgLogo:hover {
+    content: url('https://i.imgur.com/BDE36TX.png');
+}
+
+.sdgImageContainer {
+  display: flex;
+  padding-bottom: 15px;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  height: 120px;           /* Make the parent container full height */
+}
+
+.sdgImageHeader {
+	display: block;
+	width: 20%;
+	margin: 0 auto;
+}
+
+#top{
+	scroll-margin-top: 200px;
+}
+
+.logoutIcon {
+    position: absolute;
+    top: 40%;
+    right: 31px;
+    width: 50px; /* Adjust this as needed for size */
+    height: 50px; /* Ensure this is defined */
+    transform: translateY(-50%); /* Vertically center */
+    cursor: pointer;
+}
+
+.iconName {
+    position: absolute;
+    top: calc(30% + 30px); /* Adjust this to control spacing below logoutIcon */
+    right: 45px;
+    transform: translateY(-50%); /* Vertically center */
+    color: #e11584;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.logoutIconContainer:hover .iconName::after {
+    content: "Log Out";
+    position: absolute;
+    right: 23px; /* Adjust for alignment with icon */
+    top: 50%; /* Vertically center relative to iconName */
+    transform: translateY(-50%); /* Align vertically */
+    color: #e11584;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.logoutIconContainer:hover .iconName {
+    color: transparent; /* Makes the original text invisible */
+    transition: color 0.3s ease; /* Smooth transition for transparency */
+}
+
+.logoutIcon:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/*NavigationBar*/
+nav {
+	position: fixed;
+	width: 100%;
+    top: 120px; /* Adjust this value depending on header height */
+    z-index: 999;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2px 0;
+	font-family: 'Oswald', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+	display: flex;
+    list-style-type: none;
+    overflow: hidden;
+	justify-content: space-around;
+}
+
+li {
+    float: left;
+	flex: 1;
+    width: 25%;
+    text-align: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e11584;
+    text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+}
+
+li a:hover {
+    background-color: #e11584;
+    color: #f8d1e4;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+.background{ /*Background for contact*/
+	background-color: #000000;
+}	
+
+.projectBackground { /*Main Background*/
+	background-image: url("https://i.imgur.com/ff5M4sS.jpeg");
+	background-size: 100%;
+	background-position: center;
+	min-height: 100vh;
+}
+
+/*Main container for info*/
+.entireProject, .entireIndex {
+    margin-top: 180px;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+h2, h3{
+	color: #f0409d;
+	
+}	
+
+.container {
+    width: 90%;
+    height: auto;
+	overflow: hidden;
+    margin: 20px auto;
+    background-color: #e11584;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+	margin-top: 200px;
+}
+	
+.containerOne {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: #e11584;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	text-align: center; 
+}
+
+.containerTwo {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: #000000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	text-align: center;
+}
+
+.bottomImages { /*Icons in project part*/
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 100px;
+	align-items: center;
+}
+
+.bottomImagesSpecific {  /*Icons in project part*/
+	width: 250px;
+	height: auto;
+	margin-bottom: 150px;
+	transition: width 0.3s ease-in-out;
+	object-fit: contain;
+}
+
+
+.projectContainer { /*Main container for info*/
+	width: 90%;
+	height: auto;
+	margin: 20px auto;
+	margin-top: 30px;
+	scroll-margin-top: 200px;
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 20px;
+}
+
+
+div.gallery {  /*Projects part pics*/
+	display: flex;
+	gap: 20px;               /* Space between items */
+	justify-content: flex-start;  /* Align items from the left */
+	flex-wrap: wrap;          /* Items wrap if they overflow */
+}
+
+div.galleryItem {  /*Projects part pics*/
+	flex: 1 1 calc(33.33% - 20px);  /* Items take up 1/3 of the width minus gap */
+	max-width: calc(33.33% - 20px);
+	margin: 10px 0; /* Add space between rows */
+	border: 2px solid #f0409d;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	opacity: 0; /* Initially hidden */
+	transform: translateY(20px); /* Start position */
+	transition: opacity 0.5s, transform 0.5s; /* Smooth transition */
+}
+
+div.gallery img {  /*Projects part pics*/
+	width: 100%;
+	height: auto;
+	object-fit: cover; /* Crop the image instead of stretching */
+	max-height: 300px;
+}
+
+.desc {  /*Projects part description*/
+	padding: 10px;
+	font-size: 14px;
+	color: #333;
+}
+
+/*animation for the projects*/
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.galleryItem h3,
+.galleryItem .desc {
+  opacity: 0;
+  transform: translateY(10px); /* Slightly different offset for effect */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.galleryItem.animate {
+  animation: slideUp 0.5s forwards;
+}
+
+.galleryItem.animate h3,
+.galleryItem.animate .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Contact Page*/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #e11584;
+  color: white;
+  font-family: 'Oswald';
+  font-size: 22px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #f8d1e4;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label{
+	color: #f8d1e4;
+}
+
+/*Developer Page*/
+#developerHeading {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 72px;
+    color: #ffffff; 
+    margin-bottom: 40px; 
+}
+
+.developerProfileOne .developerProfileTwo{
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align image and text */
+	justify-content: space-between;
+    gap: 80px; /* Space between image and text */
+	width: 100%;
+    margin: 20px 0; /* Add spacing around the profile */
+	position: absolute;
+	bottom: 0;
+}
+
+.developerImageContainer {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.developerImage {
+    width: 600px; /* Set the desired image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Optional: Add rounded corners */
+}
+
+.developerInfoOne {
+    flex-grow: 1;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+	font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.developerInfoTwo {
+    flex-grow: 1;
+    font-family: 'Oswald', sans-serif;
+    color: #e11584;
+	font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.developerProfileOne p {
+    color: #000000;
+	font-size: 18px;
+    margin: 5px 0;
+}
+
+.developerProfileTwo p {
+    color: #f8d1e4;
+	font-size: 18px;
+    margin: 5px 0;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); /* Start from off-screen on the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+/* Apply animation class */
+.animate {
+    animation: slideInFromLeft 2s ease-out forwards; /* Smooth fade-in and slide-up */
+}
+
+/*Login Page*/
+.indexContainer {
+    width: 80%;
+    height: fit-content;
+	overflow: hidden;
+    margin: 20px auto;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+	flex: 1;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.login-form, .container, .projectContainer {
+	box-sizing: content-box; /* Override if you need to treat padding/borders separately */
+}
+
+#indexBody {
+	margin: 0;
+	padding: 0;
+	height: 3000px; /* Make the page long enough to scroll */
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	padding: 50px;
+}
+
+.indexContainer h4{
+	color: #e11584;
+	font-family: 'Oswald', sans-serif;
+}
+
+.indexContainer p{
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.container h1, h2, p {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+}
+
+.container p{
+	font-size: 20px;
+}
+
+.container h2{
+	font-size: 30px;
+}
+
+/*login Form*/
+.loginLabel{
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.login-form h2{
+	color: #e11584;
+	font-family: 'Oswald', sans-serif;
+}
+
+.login-form {
+	position: fixed; 
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid #ccc;
+	transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	opacity: 0; /* Initially invisible */
+	width: 300px;
+	text-align: center;
+	background-color: #f8d1e4;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 30px;
+	margin-top: 50px;
+}
+
+.login-form input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+}
+
+.login-form button {
+	width: 80%;
+	padding: 10px;
+	background-color: #e11584;
+	color: white;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	margin-top: 200px;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 5px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.login-form button:hover {
+	background-color: #e11584;
+}
+
+/* To trigger the opacity transition */
+.login-form.visible {
+	opacity: 1;
+	top: 150px; /* Adjust this if needed */
+}
+
+/*Homepage*/
+.homepageContainer {
+    width: 70%;
+    height: auto;
+	overflow: hidden;
+    margin: 20px auto;
+    background-color: #e11584;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+	margin-top: 200px;
+}
+
+.homepageContainerTwo {
+	width: 70%;
+	height: auto;
+	margin: 20px auto;
+	margin-top: 30px;
+	scroll-margin-top: 200px;
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.homepageContainerTwo p{
+	font-size: 18px;
+}
+
+.reasonSDG {
+	color: #e11584;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+
+/*Homepage Carousel*/
+.carousel {
+    position: relative;
+    width: 100%;
+	height: 600px;
+    max-width: 1300px; 
+    max-height: 1800px; 
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: visible;
+    width: calc(100% + 10px);
+	margin-top: 70px;
+}
+
+
+.slide {
+    flex: 0 0 20%; 
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin: 0 10px; 
+    transition: transform 0.3s ease;
+}
+
+.slide.focused {
+    transform: scale(1.2); 
+    z-index: 10; 
+    transform-origin: center center; 
+}
+
+/* Buttons (Prev, Next) */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-family: 'Oswald', sans-serif;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+/*Footer*/
+
+.footerIndex{
+	background-color: white;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease;
+	margin-top: 0 auto;
+	margin: 0 auto;
+}
+
+footer {
+  background-color: white; 
+  color: #e11584;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #e11584;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 14px;
+  color: #e11584;
+  opacity: 1;
+  font-family: 'Oswald', sans-serif;
+}
